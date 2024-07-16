@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spenev <spenev@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stefan <stefan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 11:28:50 by spenev            #+#    #+#             */
-/*   Updated: 2024/06/26 12:33:19 by spenev           ###   ########.fr       */
+/*   Updated: 2024/07/16 22:05:02 by stefan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include "../Libft/libft.h"
 # include <mlx.h>
 # include "keycodes.h"
-# include <pthread.h>
 
 # define WIDTH 800
 # define HEIGHT 600
@@ -56,13 +55,6 @@ typedef struct s_data
 	double		zoom_factor;
 	char		*fractal_type;
 }			t_data;
-
-typedef struct s_thread_data
-{
-	t_data	*data;
-	int		start_y;
-	int		end_y;
-}				t_thread_data;
 
 void	draw_fractal(t_data *data);
 int		mandelbrot(t_data *data, t_complex c);
